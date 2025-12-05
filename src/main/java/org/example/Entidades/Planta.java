@@ -1,12 +1,13 @@
 package org.example.Entidades;
 
-public class planta {
+
+public class Planta {
     private String nome;
     private float concentracao_max;
     private float concentracao_min;
     private String descricao;
 
-    public planta(String nome, float concentracao_max, float concentracao_min, String descricao) {
+    public Planta(String nome, float concentracao_max, float concentracao_min, String descricao) {
         this.nome = nome;
         this.concentracao_max = concentracao_max;
         this.concentracao_min = concentracao_min;
