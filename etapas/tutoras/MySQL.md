@@ -1,0 +1,1 @@
+[//]: # (todo implementar os tutoriais de comando MySQL, conforme eu aprender)

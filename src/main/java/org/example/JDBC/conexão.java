@@ -1,21 +1,21 @@
-package org.example;
+package org.example.JDBC;
 
 import java.sql.*;
 // importando todas as manipulaçoes do Banco de dados
-public class JDBC {
+public class conexão {
     private static final String URL = "jdbc:mysql://localhost:3307/projeto_spring";
     private static final String USER = "root";
     private static final String PASSWORD = "root123";
     // conectando as configurações do banco
 
-    private static Connection connection = null;
-    // se a conecxão ja existir ele reaproveita ??
+    private static Connection conn = null;
+    // se a conexão já existir ele reaproveita ??
 
 
     public static Connection getConnection() throws SQLException{
-        if (connection == null || connection.isClosed()){
+        if (conn == null || conn.isClosed()){
             try {
-                connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                conn = DriverManager.getConnection(URL, USER, PASSWORD);// cria a conexão
                 System.out.println("conexão estabelecida");
                 // tentar conectar
             } catch (SQLException e ){
@@ -25,18 +25,25 @@ public class JDBC {
             }
         }
 
-        return connection;
+        return conn;
         // retorna a conexão
     }
 
     public static  void closeConnection(){
-        if (connection != null){ // se a conexão existir
+        if (conn != null){ // se a conexão existir
             try {
-                connection.close();
+                conn.close();
                 System.out.println("conexão fechada");
             } catch (SQLException e ){
                 System.err.println("erro a fechar conexão"+ e.getMessage());
             }
         }
     }
+
+
 }
+
+
+// todo ver como mexer na aba database do intelijjei(1)(depois)
+// todo ver como salvar os dados do meu banco de dados usando o conceito de volumes do docker(0)
+// TODO ver como mexer no banco de daddos atravez do JDBC(3), manipular, buscar e fechar
