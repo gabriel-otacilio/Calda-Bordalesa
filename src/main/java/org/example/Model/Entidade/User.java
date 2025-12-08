@@ -1,10 +1,24 @@
 package org.example.Model.Entidade;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jdk.jfr.Enabled;
+
+@Table(name = "usuarios")
+@Entity
 public class User {
+    @Id
+    @Column(name="id")
     private int id;
+    @Column(name="nome")
     private String nome;
+    @Column(name="senha")
     private String senha;
+    @Column(name="email")
     private String email;
+    @Column(name="user_name")
     private String userName;
 
     public User(int id, String nome, String senha, String email, String userName) {
@@ -13,6 +27,10 @@ public class User {
         this.senha = senha;
         this.email = email;
         this.userName = userName;
+    }
+
+    public User() { // construtor do Spring
+
     }
 
     public int getId() {
