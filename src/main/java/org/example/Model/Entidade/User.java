@@ -1,4 +1,4 @@
-package org.example.Entidades;
+package org.example.Model.Entidade;
 
 public class User {
     private int id;

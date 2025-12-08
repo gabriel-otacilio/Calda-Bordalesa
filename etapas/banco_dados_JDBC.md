@@ -99,3 +99,10 @@ public static void buscarUsuarios() {
     }
 }    
  ```
+
+- ## Mapemanto JPA ORM (Objeto-relacional-mapeamento)
+    - **Lembrando que so isso não é suficiente pra vincular por completo a sua aplicação com o seu banco de dados**
+    - É quando ela mapeia os objeto java para tabelas do banco de dados
+    - Reduz bastante a necessidade de escrever SQL manualmente 
+    - Acelerera o desenvolvimento
+    - #### [video rápido explicando como fazer em java](https://www.google.com/search?q=mapeamento+objeto+relacional+java&oq=mapeamento+objet&gs_lcrp=EgZjaHJvbWUqCAgEEAAYFhgeMgcIABAAGIAEMgcIARAAGIAEMgYIAhBFGDkyCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIKCAgQABiABBiiBNIBCDY4OTJqMGo3qAIIsAIB8QVKsNh2mR7fz_EFSrDYdpke388&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:eabaf16e,vid:vvXqBJDOesM,st:0)
