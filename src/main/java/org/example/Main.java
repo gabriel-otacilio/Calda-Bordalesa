@@ -17,13 +17,4 @@ public class Main {
         SpringApplication.run(Main .class,args);// liga o Spring@Bean
     }
 
-    @Bean // faz com que o Spring nao sei oque nao sei oque la
-    CommandLineRunner run(PlantaRepository plantaRep, UserRepository userRep) {
-        return args -> {
-
-
-        };
-    }
-    // oque isso faz ?
-
 }

@@ -1,6 +1,7 @@
 [//]: # (todo implementar os tutoriais de comando MySQL, conforme eu aprender)
 
 # MySQL:
+- ## lembrando que o Spring já faz isso para você.
 - ## arquivo pra auxiliar nos comandos SQL
     - Depois de subir seu server MySQL, e fazer conexão pela a aba database do intelijjei é possivel rodar comando pra aquele servior, cria-se um esquema(schema)
   que vai ser nosso banco de dados em si. Tanto é que é no schema/database que vamos criar as tabelas.

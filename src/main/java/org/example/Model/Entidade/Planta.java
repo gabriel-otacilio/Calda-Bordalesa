@@ -21,8 +21,8 @@ public class Planta {
     @Column(name="descricao")
     private String descricao;
 
-    public Planta(int id, String nome, float concentracaoMax, float concentracaoMin, String descricao) {
-        this.id = id;
+    public Planta( String nome, float concentracaoMax, float concentracaoMin, String descricao) {
+        //this.id = id;
         this.nome = nome;
         this.concentracaoMax = concentracaoMax;
         this.concentracaoMin = concentracaoMin;
