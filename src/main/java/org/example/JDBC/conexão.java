@@ -49,3 +49,4 @@
     // aprender mais sobre repositorios no Spring boot
 // todo continuar a implementação de planta ate adicionar no BD
 // duplicação ?
+// listagem funcional

@@ -104,7 +104,7 @@
         <tbody>
         <!-- Percorre a lista enviada pelo controller -->
         <tr th:each="planta : ${plantas}">
-            <td th:text="${planta.nome}">Nome</td>
+           <td th:text="${planta.nome}">Nome</td> <!-- acessa o atributo nome da classe Planta e assim por diante-->
             <td th:text="${planta.concentracaoMax}">0.0</td>
             <td th:text="${planta.concentracaoMin}">0.0</td>
             <td th:text="${planta.descricao}">Descrição</td>

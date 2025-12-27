@@ -22,7 +22,6 @@
             }
         }
         ````
-      pipiip
     - Ou pode recuperar dados direto de um <form> html comum:
     - EX:
     - `````html
