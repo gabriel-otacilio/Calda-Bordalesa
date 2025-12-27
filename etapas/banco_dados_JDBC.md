@@ -105,4 +105,4 @@ public static void buscarUsuarios() {
     - É quando ela mapeia os objeto java para tabelas do banco de dados
     - Reduz bastante a necessidade de escrever SQL manualmente 
     - Acelerera o desenvolvimento
-    - #### [video rápido explicando como fazer em java](https://www.google.com/search?q=mapeamento+objeto+relacional+java&oq=mapeamento+objet&gs_lcrp=EgZjaHJvbWUqCAgEEAAYFhgeMgcIABAAGIAEMgcIARAAGIAEMgYIAhBFGDkyCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIKCAgQABiABBiiBNIBCDY4OTJqMGo3qAIIsAIB8QVKsNh2mR7fz_EFSrDYdpke388&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:eabaf16e,vid:vvXqBJDOesM,st:0)
+    - [video sobre a diferença entre JPA Spring DATA e JDBC](https://www.youtube.com/shorts/ygDWS8jADVo)

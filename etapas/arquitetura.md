@@ -30,9 +30,11 @@ As Daos e as Services.
 
 # E com o Spring? Como que fica?
 
-## Mapemanto JPA/Spirng VS Conceittos Dao Patterns
+## Mapemanto JPA/Spring VS Conceittos Dao Patterns
 
 ![img.png](img.png)
 - a DAO acaba virando o repository, pq o Spring ja faz tudo pra gente.
+
+
 
 

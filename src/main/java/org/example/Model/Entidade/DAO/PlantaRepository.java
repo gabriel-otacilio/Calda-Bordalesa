@@ -8,5 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface PlantaRepository extends JpaRepository<Planta, Integer> {
+
+    Planta findByNome(String nome);
     // aqui o Spring ja fornece os metodos de save(), findAll(), deleteById() etc
+    // aqui eu implemento os que eu preciso
 }

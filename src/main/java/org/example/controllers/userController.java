@@ -2,7 +2,7 @@ package org.example.controllers;
 
 
 import org.example.Model.Entidade.Planta;
-import org.example.Service.userService;
+import org.example.Service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,19 +12,27 @@ import java.util.List;
 @Controller
 public class userController {
     // como funciona uma controller Spring
-    userService user_service;
+    private final UserService user_service;
+
+    // construtor pra injetar a sevrice
+    public userController(UserService userService) {
+        this.user_service = userService;
+    }
+
     @GetMapping("/")
     public String home() {
-        return "home";
+
+        return "home"; // aqui eu redireciono a pagina pra esse template
     }
 
     @GetMapping("/calcularCalda")
     public String calcularCalda() {
-        return "calcularCalda";
+        return "calcularCalda";// é o template
     }
+
     @PostMapping("/calcularCalda")
     public void calcularCalda(@RequestParam String nomePlanta, @RequestParam String volumeTotal) {
-        user_service.calcularCalda(nomePlanta,volumeTotal);
+        user_service.calcularCalda(nomePlanta, volumeTotal);
     }
 
     @GetMapping("/cadastrar")
@@ -34,19 +42,21 @@ public class userController {
 
     @PostMapping("/cadastrar")
     public String cadastrar(@RequestParam String nome,
-                          @RequestParam String concentracaoMax,
-                          @RequestParam String concentracaoMin,
-                          @RequestParam String descricao) {
+                            @RequestParam String concentracaoMax,
+                            @RequestParam String concentracaoMin,
+                            @RequestParam String descricao) {
         user_service.cadPlanta(nome, Float.parseFloat(concentracaoMax), Float.parseFloat(concentracaoMin), descricao);
         // ja salva a plantinha
         return "redirect:/";
 
     }
 
-    @GetMapping("all/plantas")
-    public void listarPlantas(Model model) {
-        List<Planta> plantas = userService.listarPlantas();
-        model.addAttribute("plantas", plantas);
+    @GetMapping("/all/plantas")
+    public String listarPlantas(Model model) {// esse model quer dizer que eu mostrar um objeto/model na tela.
+        List<Planta> plantas = user_service.listarPlantas();
+        model.addAttribute("plantas", plantas);// aqui eu passo elas pra dentro da minha pagina, definindo oque é e com qual nome
+
+        return "allPlantas";
     }
 
 

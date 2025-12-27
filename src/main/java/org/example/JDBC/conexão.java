@@ -43,10 +43,9 @@
 //
 //}
 //
-//
-//// todo ver como mexer na aba database do intelijjei(1)(depois)
-//// todo ver como salvar os dados do meu banco de dados usando o conceito de volumes do docker(0)
-//
-//todo ver muito mais sobre Spring boot]
-//// todo continuar a implementação de planta ate adicionar no BD
+// todo ver como salvar os dados do meu banco de dados usando o conceito de volumes do docker(0)
+// todo ver um pouco de tratamento de excessões (tem algum framework pra isso?)
+// todo ver muito mais sobre Spring boot
+    // aprender mais sobre repositorios no Spring boot
+// todo continuar a implementação de planta ate adicionar no BD
 // duplicação ?
