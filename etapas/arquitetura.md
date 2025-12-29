@@ -1,6 +1,6 @@
 # Arquitetura DAO patterns
 
-Nesse mini trabalho estou usando a arquitetura DAO patterns, que separa as funcionalidades em : acessa o BD e não acessa o BD.
+Nesse minitrabalho estou a usar a arquitetura DAO patterns, que separa as funcionalidades em : acessa o BD e não acessa o BD.
 
 Ela é composta por teres elementos : DAO, Entity e Repository.
 

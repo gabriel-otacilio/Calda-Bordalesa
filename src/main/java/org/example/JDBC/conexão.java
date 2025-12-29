@@ -47,6 +47,6 @@
 // todo ver um pouco de tratamento de excessões (tem algum framework pra isso?)
 // todo ver muito mais sobre Spring boot
     // aprender mais sobre repositorios no Spring boot
-// todo continuar a implementação de planta ate adicionar no BD
-// duplicação ?
+// todo implementar um metodo pra retirar as plantas(here)
+// duplicação de nome
 // listagem funcional

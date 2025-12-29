@@ -14,7 +14,7 @@ import org.example.Model.Entidade.User;
 public class Main {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main .class,args);// liga o Spring@Bean
+        SpringApplication.run(Main.class, args);// liga o Spring@Bean
     }
 
 }

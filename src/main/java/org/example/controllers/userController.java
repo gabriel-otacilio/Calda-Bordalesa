@@ -25,15 +25,34 @@ public class userController {
         return "home"; // aqui eu redireciono a pagina pra esse template
     }
 
+//--------------------------------------------------------
+
     @GetMapping("/calcularCalda")
-    public String calcularCalda() {
+    public String calcularCaldaGET(Model model) {
+        model.addAttribute("plantas", user_service.listarPlantas());
         return "calcularCalda";// é o template
     }
 
     @PostMapping("/calcularCalda")
-    public void calcularCalda(@RequestParam String nomePlanta, @RequestParam String volumeTotal) {
-        user_service.calcularCalda(nomePlanta, volumeTotal);
+    public String calcularCaldaPOST(@RequestParam String tipoConcentracao,
+                                 @RequestParam double volumeTotal,
+                                 @RequestParam int idPlanta,
+                                  Model model) {
+        Planta planta = user_service.findById(idPlanta);
+
+        double resultAgua=user_service.calcularCalda(idPlanta, volumeTotal, tipoConcentracao);
+        double reagente = (volumeTotal*1000 - resultAgua)/2;
+
+        model.addAttribute("agua", resultAgua);
+        model.addAttribute("planta", planta);
+        model.addAttribute("reagente", reagente);
+
+
+        return "resultado";// aqui vai falar a receita, como x ml de agua e y de reagente
+
     }
+
+//-------------------------------------------------------------------
 
     @GetMapping("/cadastrar")
     public String cadastro() {
@@ -51,6 +70,8 @@ public class userController {
 
     }
 
+//------------------------------------------------------------------------------------
+
     @GetMapping("/all/plantas")
     public String listarPlantas(Model model) {// esse model quer dizer que eu mostrar um objeto/model na tela.
         List<Planta> plantas = user_service.listarPlantas();
@@ -59,5 +80,11 @@ public class userController {
         return "allPlantas";
     }
 
+//---------------------------------------------------------------------------------------
 
+    @PostMapping("/all/plantas/{id}")
+    public String removerPlanta(@PathVariable int id) {
+        user_service.removerPlanta(id);
+        return "redirect:/all/plantas";
+    }
 }
