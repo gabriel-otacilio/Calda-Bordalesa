@@ -35,7 +35,7 @@
         p {
             color: #2d6a4f;
             font-size: 1.1rem;
-            line-height: 1.5rem;
+            line-height: 1.6rem;
         }
 
         .btn-group {
@@ -64,11 +64,31 @@
             .btn-group {
                 flex-direction: row;
                 justify-content: center;
+                flex-wrap: wrap;
             }
 
             a.btn {
                 width: 220px;
             }
+        }
+
+        /* NOVA SEÇÃO DE TEXTO */
+        .texto-info {
+            margin-top: 3rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .texto-info h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .texto-info p {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -86,9 +106,35 @@
 
     <div class="btn-group">
         <a href="/calcularCalda" class="btn">Calcular Calda</a>
-        <a href="/all/plantas"class=" btn">Listar Plantas</a>
+        <a href="/all/plantas" class="btn">Listar Plantas</a>
         <a href="/cadastrar" class="btn">Cadastrar Plantas</a>
     </div>
+
+    <!-- NOVO CAMPO DE TEXTO -->
+    <section class="texto-info">
+        <h2>Sobre a Calda Bordalesa</h2>
+
+        <!--        <p>-->
+        <!--            A calda bordalesa é um fungicida tradicional à base de sulfato de cobre e cal virgem,-->
+        <!--            amplamente utilizada na agricultura para o controle de doenças fúngicas.-->
+        <!--        </p>-->
+
+        <h2>Preparo do Estoque de CAL a 10%</h2>
+
+        <p>
+            Em um balde plastico dissolver 1kg de cal em 10L de água. Caso a cal utilizada seja virgem,deve-se tomar
+            cuidado no momento de "apagar" a cal, adicionando-se lentamente até formar uma pasta
+        </p>
+
+        <h2>Preparo do Estoque de cobre a 10%</h2>
+
+        <p>
+            Em um balde de plastico dissolver 1kg de sulfato de cobre em 10L de água. Quando o sulfato de cobre esta na
+            forma de pó, a diluição se dá rapidamente e sem deixar resíduos no fundo do balde. Caso o sulfato de cobre
+            esteja na forma de pedra é recomendado que o transforme em po triturando-o primeiro e fazer o mesmo processo
+            do caso acima
+        </p>
+    </section>
 </main>
 
 </body>

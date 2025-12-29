@@ -5,6 +5,36 @@
     <title>Plantas Cadastradas</title>
 
     <style>
+
+        .btn-delete {
+            background: #d62828;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-delete:hover {
+            background: #9d0208;
+        }
+
+        .btn-edit {
+            background: #233ecb;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-edit:hover {
+            background: #233ecb;
+        }
+
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -38,7 +68,7 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
         th, td {
@@ -98,16 +128,27 @@
             <th>Conc. Máxima</th>
             <th>Conc. Mínima</th>
             <th>Descrição</th>
+            <th>Ações</th>
         </tr>
         </thead>
 
         <tbody>
         <!-- Percorre a lista enviada pelo controller -->
         <tr th:each="planta : ${plantas}">
-           <td th:text="${planta.nome}">Nome</td> <!-- acessa o atributo nome da classe Planta e assim por diante-->
+            <td th:text="${planta.nome}">Nome</td> <!-- acessa o atributo nome da classe Planta e assim por diante-->
             <td th:text="${planta.concentracaoMax}">0.0</td>
             <td th:text="${planta.concentracaoMin}">0.0</td>
             <td th:text="${planta.descricao}">Descrição</td>
+            <td>
+                <form th:action="@{/all/plantas/{id}(id = ${planta.id})}" method="post"
+                      onsubmit="return confirm('Deseja realmente apagar a plantinha ?')">
+                    <button type="submit" class="btn-delete">Deletar</button>
+                </form>
+                <br>
+                <form th:action="@{/all/plantas/edit/{id} (id = ${planta.id})}" method="post">
+                    <button type="submit" class="btn-edit">Editar</button>
+                </form>
+            </td>
         </tr>
 
         <!-- Caso a lista esteja vazia -->
