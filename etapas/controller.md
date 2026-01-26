@@ -1,9 +1,9 @@
-# Como funciona a servcie/Aplication no spring
+# Como funciona a Controller no spring
 - ## Recuperando dados do front-end:
     - De modo geral existem dois modos específicos no spring para recuperar dados do front-end: Utilizando json e form-data e utilizando um formulario html comum
     - Pode-se usar javascript e utilizar a função de fetch para recuperar os dados e enviar para o back-end no formato json e pra recuperar eu utilizo o @RequestBody
-    - **@RequestBody já transforma o json em objeto usuario**
-    - EX: 1°) No Front-end: 2°) No Back-end:
+    - **@RequestBody já transforma o json em objeto usuário**
+    - EX:  No Front-end: 
     - ```JavaScript
         fetch('http://localhost:8080/usuarios', {
         method: 'POST',
@@ -11,6 +11,7 @@
         headers: { 'Content-Type': 'application/json' }
         })
         ```
+       No Back-end:
       ````java
         @RestController
         @RequestMapping("/usuarios")
@@ -34,6 +35,7 @@
     - `````java
         @PostMapping("/usuario/cadastrar")
         public String cadastrar(@RequestParam String nome, @RequestParam int idade){
+            // mesmo nomes dos campos no html
             return "nome: " + nome + " idade: " + idade;
 
         }
