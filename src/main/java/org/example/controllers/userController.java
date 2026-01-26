@@ -35,13 +35,13 @@ public class userController {
 
     @PostMapping("/calcularCalda")
     public String calcularCaldaPOST(@RequestParam String tipoConcentracao,
-                                 @RequestParam double volumeTotal,
-                                 @RequestParam int idPlanta,
-                                  Model model) {
+                                    @RequestParam double volumeTotal,
+                                    @RequestParam int idPlanta,
+                                    Model model) {
         Planta planta = user_service.findById(idPlanta);
 
-        double resultAgua=user_service.calcularCalda(idPlanta, volumeTotal, tipoConcentracao);
-        double reagente = (volumeTotal*1000 - resultAgua)/2;
+        double resultAgua = user_service.calcularCalda(idPlanta, volumeTotal, tipoConcentracao);
+        double reagente = (volumeTotal * 1000 - resultAgua) / 2;
 
         model.addAttribute("agua", resultAgua);
         model.addAttribute("planta", planta);

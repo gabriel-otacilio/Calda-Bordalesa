@@ -1,15 +1,12 @@
 package org.example.Model.Entidade;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jdk.jfr.Enabled;
+import jakarta.persistence.*;
 
 @Table(name = "usuarios")
 @Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// defini o tipo de geracao do id
     @Column(name="id")
     private int id;
     @Column(name="nome")
