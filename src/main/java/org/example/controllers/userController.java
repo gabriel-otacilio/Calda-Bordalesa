@@ -53,7 +53,7 @@ public class userController {
     // retornando uma lista
     // funcional
     @GetMapping("/allPlantas")
-    public List<Planta> listarPlantas() {// esse model quer dizer que eu mostrar um objeto/model na tela
+    public List<Planta> listarPlantas() {
         return user_service.listarPlantas();// o spring vai transformar automaticamente a lista em json
     }
 
