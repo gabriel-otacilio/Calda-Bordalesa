@@ -1,15 +1,16 @@
 package org.example.controllers;
 
 
+import org.example.DTO.PlantaDTO;
 import org.example.Model.Entidade.Planta;
 import org.example.Service.UserService;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/api")
 public class userController {
     // como funciona uma controller Spring
     private final UserService user_service;
@@ -19,19 +20,9 @@ public class userController {
         this.user_service = userService;
     }
 
-    @GetMapping("/")
-    public String home() {
-
-        return "home"; // aqui eu redireciono a pagina pra esse template
-    }
-
 //--------------------------------------------------------
 
-    @GetMapping("/calcularCalda")
-    public String calcularCaldaGET(Model model) {
-        model.addAttribute("plantas", user_service.listarPlantas());
-        return "calcularCalda";// é o template
-    }
+
 
     @PostMapping("/calcularCalda")
     public String calcularCaldaPOST(@RequestParam String tipoConcentracao,
@@ -48,41 +39,28 @@ public class userController {
         model.addAttribute("reagente", reagente);
 
 
-        return "resultado";// aqui vai falar a receita, como x ml de agua e y de reagente
+        return "resultado";
 
     }
 
 //-------------------------------------------------------------------
-
-    @GetMapping("/cadastrar")
-    public String cadastro() {
-        return "cadastrar";
-    }
-
-    @PostMapping("/cadastrar")
-    public String cadastrar(@RequestParam String nome,
-                            @RequestParam String concentracaoMax,
-                            @RequestParam String concentracaoMin,
-                            @RequestParam String descricao) {
-        user_service.cadPlanta(nome, Float.parseFloat(concentracaoMax), Float.parseFloat(concentracaoMin), descricao);
-        // ja salva a plantinha
-        return "redirect:/";
-
+    // cadastra uma planta
+    @PostMapping("/cadPlanta")
+    public String cadastrar(@RequestBody PlantaDTO planta) {
+        user_service.cadPlanta(planta.nome, planta.concentracaoMax, planta.concentracaoMin, planta.descricao);
+        return "planta cadastrada com sucesso!";
     }
 
 //------------------------------------------------------------------------------------
-
-    @GetMapping("/all/plantas")
-    public String listarPlantas(Model model) {// esse model quer dizer que eu mostrar um objeto/model na tela.
-        List<Planta> plantas = user_service.listarPlantas();
-        model.addAttribute("plantas", plantas);// aqui eu passo elas pra dentro da minha pagina, definindo oque é e com qual nome
-
-        return "allPlantas";
+    // retornando uma lista
+    @GetMapping("/allPlantas")
+    public List<Planta> listarPlantas() {// esse model quer dizer que eu mostrar um objeto/model na tela
+        return user_service.listarPlantas();// o spring vai transformar automaticamente a lista em json
     }
 
 //---------------------------------------------------------------------------------------
 
-    @PostMapping("/all/plantas/{id}")
+    @PostMapping("/allPlantas/{id}")
     public String removerPlanta(@PathVariable int id) {
         user_service.removerPlanta(id);
         return "redirect:/all/plantas";
