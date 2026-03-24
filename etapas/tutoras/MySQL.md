@@ -17,7 +17,7 @@
 - listar colunas de uma tabela: DESCRIBE nome_tabela;
 - Exemplo: 
 - ```sql
-  DESCRIBE alunos**
+  DESCRIBE alunos
 ***
 - inserir dados: INSERT INTO nome_tabela (coluna1, coluna2,...) VALUES (valor1, valor2,...);
 - Exemplo: 
