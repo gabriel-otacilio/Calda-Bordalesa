@@ -1,6 +1,8 @@
 package org.example.controllers;
 
 
+import org.example.DTO.CaldaRequestDTO;
+import org.example.DTO.CaldaResponseDTO;
 import org.example.DTO.PlantaDTO;
 import org.example.Model.Entidade.Planta;
 import org.example.Service.UserService;
@@ -23,28 +25,24 @@ public class userController {
 //--------------------------------------------------------
 
 
-
+    // funcional
     @PostMapping("/calcularCalda")
-    public String calcularCaldaPOST(@RequestParam String tipoConcentracao,
-                                 @RequestParam double volumeTotal,
-                                 @RequestParam int idPlanta,
-                                  Model model) {
-        Planta planta = user_service.findById(idPlanta);
+    public CaldaResponseDTO calcularCaldaPOST(@RequestBody CaldaRequestDTO request) {
+        Planta planta = user_service.findById(request.idPlanta);
 
-        double resultAgua=user_service.calcularCalda(idPlanta, volumeTotal, tipoConcentracao);
-        double reagente = (volumeTotal*1000 - resultAgua)/2;
+        double resultAgua=user_service.calcularCalda(
+                request.idPlanta,
+                request.volumeTotal,
+                request.tipoConcentracao);
 
-        model.addAttribute("agua", resultAgua);
-        model.addAttribute("planta", planta);
-        model.addAttribute("reagente", reagente);
-
-
-        return "resultado";
+        double reagente = (request.volumeTotal*1000 - resultAgua)/2;
+        return new CaldaResponseDTO(resultAgua, reagente, planta);
 
     }
 
 //-------------------------------------------------------------------
     // cadastra uma planta
+    //funcional
     @PostMapping("/cadPlanta")
     public String cadastrar(@RequestBody PlantaDTO planta) {
         user_service.cadPlanta(planta.nome, planta.concentracaoMax, planta.concentracaoMin, planta.descricao);
@@ -53,16 +51,18 @@ public class userController {
 
 //------------------------------------------------------------------------------------
     // retornando uma lista
+    // funcional
     @GetMapping("/allPlantas")
     public List<Planta> listarPlantas() {// esse model quer dizer que eu mostrar um objeto/model na tela
         return user_service.listarPlantas();// o spring vai transformar automaticamente a lista em json
     }
 
 //---------------------------------------------------------------------------------------
-
-    @PostMapping("/allPlantas/{id}")
+    // funcional
+    @DeleteMapping("/allPlantas/{id}")
     public String removerPlanta(@PathVariable int id) {
         user_service.removerPlanta(id);
-        return "redirect:/all/plantas";
+        return "planta de id: " + id + " removida com sucesso!";
+
     }
 }
