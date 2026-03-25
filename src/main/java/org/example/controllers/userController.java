@@ -6,11 +6,12 @@ import org.example.DTO.CaldaResponseDTO;
 import org.example.DTO.PlantaDTO;
 import org.example.Model.Entidade.Planta;
 import org.example.Service.UserService;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
 public class userController {

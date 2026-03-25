@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface PlantaRepository extends JpaRepository<Planta, Integer> {
 
-    Planta findByNome(String nome);
+    //Planta findByNome(String nome);
 
     void removeById(int id);
 

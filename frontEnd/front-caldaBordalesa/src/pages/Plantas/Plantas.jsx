@@ -1,0 +1,59 @@
+import {Link} from "react-router-dom";
+import { useState, useEffect } from "react";
+import api from "../../services/api";
+import "./style.css"
+
+function Plantas() {
+    const [plantas, setPlantas] = useState([])
+    // toda a vez que eu criar uma variável que não é 'fixa' eu preciso criar um estado
+
+    async function getPlantas() {
+        let response = await api.get("/api/allPlantas")
+        setPlantas(response.data)// atualizo as minhas plantas com a lista que eu trouxe com o meu get
+        // usando o axios a resposta da API vem como um objeto completo ai pra pegar os dados eu uso o .data
+    }
+
+    useEffect(()=>// isso executa a chamada quando a pagina recarregar, ideal  pra gets
+    {
+        getPlantas();
+    },[])
+
+    return (
+
+        <div className="container">
+
+            <h1>Plantas</h1>
+            <Link to="/">Home</Link>
+            <br/>
+            <Link to="/calcula">Calcula calda</Link>
+            <br/>
+            <Link to="/cadastro">Cadastrar planta</Link>
+            <div className="lista-planta">
+                {plantas.map((planta) =>
+                    (
+                        <div key={planta.id}>
+
+                            <p>Nome: {planta.nome}</p>
+                            <p>Concentração maxima: {planta.concentracaoMax}</p>
+                            <p>
+                                Concentração mínima: {
+                                planta.concentracaoMin
+                            }
+                            </p>
+                            <p>Descrição: {planta.descricao}</p>
+                            <br/>
+                        </div>
+                        //todo colocar icone de lixeira pra apagar a planta
+                ))
+
+                }
+            </div>
+        </div>
+
+
+    )
+
+
+}
+
+export default Plantas

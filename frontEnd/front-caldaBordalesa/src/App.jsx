@@ -1,8 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './pages/Home';
-import Plantas from './pages/Plantas';
-import Cadastro from './pages/Cadastro';
-import Calcula from './pages/Calcula';
+import Home from './pages/Home/Home.jsx';
+import Plantas from './pages/Plantas/Plantas.jsx';
+import Cadastro from './pages/Cadastro/Cadastro.jsx';
+import Calcula from './pages/Calcula/Calcula.jsx';
 
 
 function App() {

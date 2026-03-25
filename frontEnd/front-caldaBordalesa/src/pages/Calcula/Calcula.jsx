@@ -5,7 +5,7 @@ function Calcula() {
     return (
         <div>
             <h1>Calcula</h1>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <br/>
             <Link to="/plantas">Plantas</Link>
             <br/>
