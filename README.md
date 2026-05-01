@@ -13,4 +13,6 @@
 - usando arquitetura MVC + Dao Pattern
 - usando o banco de dados MySQL, que esta rodando localmente via container docker
 
-Existe tbm a pasta etapas que contem os passos que eu fiz para criar o projeto e uma epecie de tutorial pra entender um pouco das tecnologias que usei para o desenvolvimento do trabalho
+Existe também a pasta etapas que contem os passos que fiz para criar o projeto e uma espécie de tutorial para entender um pouco das tecnologias que usei para o desenvolvimento do trabalho
+
+--- nesa branch troquei o banco usado de My sql para H2 a fim de que o projeto não fique refém do docker pra utilizar localmente e que o conteúdo do BD sejam versioned tbm 
