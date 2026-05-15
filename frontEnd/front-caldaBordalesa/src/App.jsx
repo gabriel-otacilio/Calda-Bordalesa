@@ -15,10 +15,12 @@ function App() {
                 <Route path="/plantas" element={<Plantas/>}/>
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/calcula" element={<Calcula/>}/>
+
             </Routes>
         </BrowserRouter>
 
     )
+    //todo terminar a pagina de calular a calda
 }
 
 export default App

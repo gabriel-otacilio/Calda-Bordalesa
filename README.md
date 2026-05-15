@@ -17,4 +17,4 @@ Existe também a pasta etapas que contem os passos que fiz para criar o projeto 
 
 ---
 
-Nessa branch eu pretendo realiazr o desenvolvimento do projeto usando agora a biblioteca React do javascript. Afim de ser uma aplicação simples para praticar a conexão entre o front e o back de forma dinamica e rapida
+Nessa branch eu pretendo realizar o desenvolvimento do projeto usando agora a biblioteca React do javascript. Afim de ser uma aplicação simples para praticar a conexão entre o front e o back de forma dinamica e rapida

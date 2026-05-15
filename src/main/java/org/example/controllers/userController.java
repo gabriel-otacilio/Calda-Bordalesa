@@ -31,13 +31,13 @@ public class userController {
     public CaldaResponseDTO calcularCaldaPOST(@RequestBody CaldaRequestDTO request) {
         Planta planta = user_service.findById(request.idPlanta);
 
-        double resultAgua=user_service.calcularCalda(
+        double agua=user_service.calcularCalda(
                 request.idPlanta,
                 request.volumeTotal,
                 request.tipoConcentracao);
 
-        double reagente = (request.volumeTotal*1000 - resultAgua)/2;
-        return new CaldaResponseDTO(resultAgua, reagente, planta);
+        double reagente = Math.round((request.volumeTotal*1000 - agua)/2);
+        return new CaldaResponseDTO(agua, reagente, planta);
 
     }
 

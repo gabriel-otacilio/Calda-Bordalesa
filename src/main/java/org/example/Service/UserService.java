@@ -63,9 +63,7 @@ public class UserService {
             concentracao = planta.getConcentracaoMin();
         }
 
-        return   ((concentracao*1000*2) - volumeTotal*1000)*-1; // em ml
-
-
+        return Math.round(((concentracao * 1000 * 2) - volumeTotal * 1000) * -1); // em ml
 
 
     }
