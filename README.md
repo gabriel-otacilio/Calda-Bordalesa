@@ -1,16 +1,19 @@
-## Desenvolvimento de uma calculadora bordalesa pra fins de estudo
-- desenvolvido usando:
-    - java 
-    - maven
-    - Spring boot com algumas 'bibiliotecas':
-      - Spring boot starter web
-      - Spring boot starter data jpa
-      - Spring boot starter test
-      - Spring bott starter Thymeleaf
-      - Spring boot devtools
+#  Calda-Bordalesa
 
+API para cálculo da dosagem de **calda bordalesa** (fungicida/bactericida natural à base de sulfato de cobre e cal) personalizada por **cultura agrícola**.
 
-- usando arquitetura MVC + Dao Pattern
-- usando o banco de dados MySQL, que esta rodando localmente via container docker
+A proporção ideal de cada componente varia conforme a cultura (uva, tomate, café, citros, etc.) — usar uma receita genérica pode ser ineficaz ou até prejudicar a planta por excesso de cobre. Este projeto automatiza esse cálculo, recebendo a cultura e o volume desejado e retornando a dosagem correta de cada insumo.
 
-Existe tbm a pasta etapas que contem os passos que eu fiz para criar o projeto e uma epecie de tutorial pra entender um pouco das tecnologias que usei para o desenvolvimento do trabalho
+## Stack
+
+Java 21 · Spring Boot · Spring Data JPA · H2 · Maven
+
+## Como rodar
+
+```bash
+git clone https://github.com/[seu-usuario]/Calda-Bordalesa.git
+cd Calda-Bordalesa
+./mvnw spring-boot:run
+```
+
+API aberta em `http://localhost:8080`.
