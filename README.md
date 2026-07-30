@@ -3,11 +3,11 @@
     - java 
     - maven
     - Spring boot com algumas 'bibiliotecas':
-    - Spring boot starter web
-    - Spring boot starter data jpa
-    - Spring boot starter test
-    - Spring bott starter Thymeleaf
-    - Spring boot devtools
+      - Spring boot starter web
+      - Spring boot starter data jpa
+      - Spring boot starter test
+      - Spring bott starter Thymeleaf
+      - Spring boot devtools
 
 
 - usando arquitetura MVC + Dao Pattern
