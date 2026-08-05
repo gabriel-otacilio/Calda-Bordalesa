@@ -1,10 +1,8 @@
-package org.example.Model.Entidade.DAO;
+package org.example.repository;
 
-import org.example.Model.Entidade.Planta;
+import org.example.entity.Planta;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
 
 @Repository
 public interface PlantaRepository extends JpaRepository<Planta, Integer> {

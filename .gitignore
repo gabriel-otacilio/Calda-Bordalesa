@@ -2,7 +2,7 @@ target/
 data/
 node_modules/
 frontEnd/front-caldaBordalesa/node_modules
-!.mvn/wrapper/maven-wrapper.jar
+!backend/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 .kotlin

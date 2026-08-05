@@ -1,8 +1,8 @@
-package org.example.Service;
+package org.example.service;
 
 import jakarta.transaction.Transactional;
-import org.example.Model.Entidade.DAO.PlantaRepository;
-import org.example.Model.Entidade.Planta;
+import org.example.repository.PlantaRepository;
+import org.example.entity.Planta;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

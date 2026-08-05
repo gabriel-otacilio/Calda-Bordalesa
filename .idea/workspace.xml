@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a23e69de-ea59-4503-9400-8cb5da2de526" name="Changes" comment="removendo templates HTML do backend e adicionando front-end React com integração à API">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/entity/Planta.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/entity/Planta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/repository/PlantaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/repository/PlantaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DTO/CaldaRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DTO/CaldaResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DTO/PlantaDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JDBC/conexão.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/Entidade/DAO/PlantaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/Entidade/DAO/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/Entidade/Planta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/Entidade/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/userController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/comentado.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gabriel-otacilio&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="5db6fa75-f964-4367-8f54-32678107130d" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gabriel-otacilio/Calda-Bordalesa.git&quot;,
+    &quot;accountId&quot;: &quot;5db6fa75-f964-4367-8f54-32678107130d&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="36OzFBs11MNi1E7FwZVkFLafg1N" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;React-front&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gabri/Documents/cursos/Projects_aParte/calcCaldaNovo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Gabriel/Documents/Cursos/curso_Java/calcCaldaNovo/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\gabri\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;,
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gabri\Documents\cursos\Projects_aParte\calcCaldaNovo\backend" />
+      <recent name="C:\Users\gabri\Documents\cursos\curso_Java\calcCaldaNovo\frontEnd\front-caldaBordalesa\src\pages\Plantas" />
+      <recent name="C:\Users\gabri\Documents\cursos\curso_Java\calcCaldaNovo\frontEnd\front-caldaBordalesa\src\pages\Calcula" />
+      <recent name="C:\Users\gabri\Documents\cursos\curso_Java\calcCaldaNovo\frontEnd\front-caldaBordalesa\src\pages\Cadastro" />
+      <recent name="C:\Users\gabri\Documents\cursos\curso_Java\calcCaldaNovo\frontEnd\front-caldaBordalesa\src\pages\Home" />
+    </key>
+    <key name="ImportExportFile.TargetDir.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/etapas" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="calcCaldaNovo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a23e69de-ea59-4503-9400-8cb5da2de526" name="Changes" comment="" />
+      <created>1764892300533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764892300533</updated>
+      <workItem from="1764892311070" duration="4832000" />
+      <workItem from="1764944113629" duration="17644000" />
+      <workItem from="1765034221133" duration="3261000" />
+      <workItem from="1765064938191" duration="1771000" />
+      <workItem from="1765113929305" duration="1569000" />
+      <workItem from="1765205393851" duration="590000" />
+      <workItem from="1765225611002" duration="9166000" />
+      <workItem from="1765381613424" duration="661000" />
+      <workItem from="1765388239395" duration="10552000" />
+      <workItem from="1765467210418" duration="912000" />
+      <workItem from="1765478260356" duration="6731000" />
+      <workItem from="1765487846890" duration="514000" />
+      <workItem from="1765488771216" duration="981000" />
+      <workItem from="1766180752261" duration="1048000" />
+      <workItem from="1766258611505" duration="769000" />
+      <workItem from="1766523937400" duration="404000" />
+      <workItem from="1766526129085" duration="3652000" />
+      <workItem from="1766697926051" duration="224000" />
+      <workItem from="1766858137465" duration="2951000" />
+      <workItem from="1766861244647" duration="3121000" />
+      <workItem from="1766866320337" duration="4201000" />
+      <workItem from="1766870805853" duration="70000" />
+      <workItem from="1766870890038" duration="522000" />
+      <workItem from="1766872116986" duration="214000" />
+      <workItem from="1766872626364" duration="1915000" />
+      <workItem from="1767023204492" duration="1888000" />
+      <workItem from="1767025111631" duration="150000" />
+      <workItem from="1767025276647" duration="65000" />
+      <workItem from="1767025354360" duration="146000" />
+      <workItem from="1767025513874" duration="178000" />
+      <workItem from="1767025706791" duration="741000" />
+      <workItem from="1767036102284" duration="3967000" />
+      <workItem from="1767041586611" duration="5868000" />
+      <workItem from="1767128590930" duration="6852000" />
+      <workItem from="1767553323990" duration="1111000" />
+      <workItem from="1767984413040" duration="114000" />
+      <workItem from="1767984541408" duration="341000" />
+      <workItem from="1769439790170" duration="3278000" />
+      <workItem from="1769452360847" duration="5083000" />
+      <workItem from="1771518336986" duration="628000" />
+      <workItem from="1772220308702" duration="4417000" />
+      <workItem from="1773255128400" duration="3429000" />
+      <workItem from="1773962887445" duration="1040000" />
+      <workItem from="1774353708718" duration="6578000" />
+      <workItem from="1774360320465" duration="1451000" />
+      <workItem from="1774373123347" duration="2526000" />
+      <workItem from="1774389557118" duration="173000" />
+      <workItem from="1774389970320" duration="6365000" />
+      <workItem from="1774411603926" duration="127000" />
+      <workItem from="1774525507615" duration="9295000" />
+      <workItem from="1774558985484" duration="622000" />
+      <workItem from="1777671457607" duration="3900000" />
+      <workItem from="1777768511390" duration="5208000" />
+      <workItem from="1778786188511" duration="1196000" />
+      <workItem from="1778796796201" duration="1436000" />
+      <workItem from="1778798256859" duration="1935000" />
+      <workItem from="1778807041331" duration="4189000" />
+      <workItem from="1779841820905" duration="400000" />
+      <workItem from="1783890979993" duration="68000" />
+      <workItem from="1783891093712" duration="1782000" />
+      <workItem from="1785182835626" duration="15000" />
+      <workItem from="1785937064435" duration="585000" />
+      <workItem from="1785937866165" duration="2357000" />
+      <workItem from="1785940322052" duration="424000" />
+    </task>
+    <task id="LOCAL-00001" summary="adicionando arquivos de configuração do IntelliJ, classes de entidade (User e Planta), classe DAO (userDao) e atualizando estrutura da conexão JDBC">
+      <option name="closed" value="true" />
+      <created>1764957992908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764957992908</updated>
+    </task>
+    <task id="LOCAL-00002" summary="migrando para Spring Boot: adicionando configurações no application.properties, dependências e plugins no pom.xml, adaptando classe Main, e ajustando a entidade Planta para seguir convenções">
+      <option name="closed" value="true" />
+      <created>1764962264270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764962264270</updated>
+    </task>
+    <task id="LOCAL-00003" summary="migração para JpaRepository: adicionando PlantaRepository, refatorando entidade Planta para uso de @Entity, ajustando Main para salvar entidade no banco, e reorganizando pacotes">
+      <option name="closed" value="true" />
+      <created>1765234929216</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765234929216</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adicionando UserRepository, entidade User com anotações JPA, e ajustando Main para integração com o repositório">
+      <option name="closed" value="true" />
+      <created>1765236894098</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765236894098</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adicionando templates `home.html` e `cadastrar.html`, controller `userController`, service `userService`, refatorando `Planta` para novo construtor, e ajustando `pom.xml` para remover dependência desnecessária">
+      <option name="closed" value="true" />
+      <created>1765398882904</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765398882904</updated>
+    </task>
+    <task id="LOCAL-00006" summary="listagem de plantas funcional">
+      <option name="closed" value="true" />
+      <created>1766868393308</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1766868393308</updated>
+    </task>
+    <task id="LOCAL-00007" summary="comit teste">
+      <option name="closed" value="true" />
+      <created>1766868421203</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1766868421203</updated>
+    </task>
+    <task id="LOCAL-00008" summary="cadastro de plantas funcional">
+      <option name="closed" value="true" />
+      <created>1766870611386</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1766870611386</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adiciona remoção e edição de plantas, ajusta cálculo de calda e atualiza layout">
+      <option name="closed" value="true" />
+      <created>1767051348813</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1767051348813</updated>
+    </task>
+    <task id="LOCAL-00010" summary="adiciona templates Thymeleaf para cálculo e resultado da calda, atualiza README e remove arquivo de instruções JDBC">
+      <option name="closed" value="true" />
+      <created>1769440252302</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769440252302</updated>
+    </task>
+    <task id="LOCAL-00011" summary="migra projeto para uso do banco de dados H2, ajusta propriedades de configuração e remove dependência do MySQL">
+      <option name="closed" value="true" />
+      <created>1769456373444</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1769456373445</updated>
+    </task>
+    <task id="LOCAL-00012" summary="criando componente de Listagem de plantas, liberando problema de cirs">
+      <option name="closed" value="true" />
+      <created>1777673487251</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777673487251</updated>
+    </task>
+    <task id="LOCAL-00013" summary="criando componente de Listagem de plantas, liberando problema de cirs">
+      <option name="closed" value="true" />
+      <created>1777673585471</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777673585471</updated>
+    </task>
+    <task id="LOCAL-00014" summary="criando componente de Listagem de plantas, liberando problema de cirs">
+      <option name="closed" value="true" />
+      <created>1777673592093</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777673592093</updated>
+    </task>
+    <task id="LOCAL-00015" summary="removendo templates HTML do backend e adicionando front-end React com integração à API">
+      <option name="closed" value="true" />
+      <created>1778811034136</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1778811034136</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.tpl" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adicionando arquivos de configuração do IntelliJ, classes de entidade (User e Planta), classe DAO (userDao) e atualizando estrutura da conexão JDBC" />
+    <MESSAGE value="migrando para Spring Boot: adicionando configurações no application.properties, dependências e plugins no pom.xml, adaptando classe Main, e ajustando a entidade Planta para seguir convenções" />
+    <MESSAGE value="migração para JpaRepository: adicionando PlantaRepository, refatorando entidade Planta para uso de @Entity, ajustando Main para salvar entidade no banco, e reorganizando pacotes" />
+    <MESSAGE value="adicionando UserRepository, entidade User com anotações JPA, e ajustando Main para integração com o repositório" />
+    <MESSAGE value="adicionando templates `home.html` e `cadastrar.html`, controller `userController`, service `userService`, refatorando `Planta` para novo construtor, e ajustando `pom.xml` para remover dependência desnecessária" />
+    <MESSAGE value="listagem de plantas funcional" />
+    <MESSAGE value="comit teste" />
+    <MESSAGE value="cadastro de plantas funcional" />
+    <MESSAGE value="adiciona remoção e edição de plantas, ajusta cálculo de calda e atualiza layout" />
+    <MESSAGE value="adiciona templates Thymeleaf para cálculo e resultado da calda, atualiza README e remove arquivo de instruções JDBC" />
+    <MESSAGE value="migra projeto para uso do banco de dados H2, ajusta propriedades de configuração e remove dependência do MySQL" />
+    <MESSAGE value="criando componente de Listagem de plantas, liberando problema de cirs" />
+    <MESSAGE value="removendo templates HTML do backend e adicionando front-end React com integração à API" />
+    <option name="LAST_COMMIT_MESSAGE" value="removendo templates HTML do backend e adicionando front-end React com integração à API" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,11 +1,11 @@
 package org.example.controllers;
 
 
-import org.example.DTO.CaldaRequestDTO;
-import org.example.DTO.CaldaResponseDTO;
-import org.example.DTO.PlantaDTO;
-import org.example.Model.Entidade.Planta;
-import org.example.Service.UserService;
+import org.example.dto.CaldaRequestDTO;
+import org.example.dto.CaldaResponseDTO;
+import org.example.dto.PlantaDTO;
+import org.example.entity.Planta;
+import org.example.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
-public class userController {
+public class UserController {
     // como funciona uma controller Spring
+
     private final UserService user_service;
 
-    // construtor pra injetar a sevrice
-    public userController(UserService userService) {
+    // construtor pra injetar a service
+    public UserController(UserService userService) {
         this.user_service = userService;
     }
 

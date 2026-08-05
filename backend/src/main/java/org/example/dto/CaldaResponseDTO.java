@@ -1,6 +1,6 @@
-package org.example.DTO;
+package org.example.dto;
 
-import org.example.Model.Entidade.Planta;
+import org.example.entity.Planta;
 
 public class CaldaResponseDTO {
     public double agua;
