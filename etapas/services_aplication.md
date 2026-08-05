@@ -4,14 +4,16 @@
     - Pode-se usar javascript e utilizar a função de fetch para recuperar os dados e enviar para o back-end no formato json e pra recuperar eu utilizo o @RequestBody
     - **@RequestBody já transforma o json em objeto usuario**
     - EX: 1°) No Front-end: 2°) No Back-end:
-    - ```JavaScript
+  
+    ```JavaScript
         fetch('http://localhost:8080/usuarios', {
         method: 'POST',
         body: JSON.stringify(usuario),
         headers: { 'Content-Type': 'application/json' }
         })
-        ```
-      ````java
+    ```
+
+    ````java
         @RestController
         @RequestMapping("/usuarios")
         public class UsuarioController {
@@ -21,24 +23,30 @@
                   // aqui ele ja vai tranforma o meu json em objeto usuario        
             }
         }
-        ````
+    ````
+
     - Ou pode recuperar dados direto de um <form> html comum:
     - EX:
-    - `````html
+  
+```html
         <form action="/usuario/cadastrar" method="post">
             <input type="text" name="nome">
             <input type="number" name="idade">
             <button type="submit">Enviar</button>
         </form>
-        `````
-    - `````java
+```
+
+````java
         @PostMapping("/usuario/cadastrar")
         public String cadastrar(@RequestParam String nome, @RequestParam int idade){
             return "nome: " + nome + " idade: " + idade;
 
         }
-        `````
-      aqui ele recupera os dados do formulario html comum que estao nos campos com os mesmos nomes que eu coloquei no @RequestParam
+````
 
-## Como eu vou mostrar os dados que o back-end me enviou? 
-- é necessario um pouco de conhecimento do thymelef que eu tbm n tenho nesse momento entao vou ralar aqui
+- aqui ele recupera os dados do formulario html comum que estao nos campos com os mesmos nomes que eu coloquei no @RequestParam
+
+## Como eu vou mostrar os dados que o back-end me enviou?
+
+- é necessario um pouco de conhecimento do (front) que eu tbm n tenho nesse momento entao vou ralar aqui
+- completar essa parte 
